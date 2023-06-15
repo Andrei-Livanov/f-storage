@@ -18,7 +18,7 @@ async function bootstrap() {
     swagger_1.SwaggerModule.setup('swagger', app, document, {
         swaggerOptions: { persistAuthorization: true },
     });
-    await app.listen(7777);
+    await app.listen(process.env.PORT || 7777);
 }
-bootstrap();
+bootstrap().then();
 //# sourceMappingURL=main.js.map
